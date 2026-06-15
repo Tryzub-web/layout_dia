@@ -4,6 +4,10 @@
 .page {
   scroll-behavior: smooth;
 
+  &:has(.top-bar__nav:target) {
+    overflow: hidden;
+  }
+
   &__body {
     overflow-x: hidden;
 

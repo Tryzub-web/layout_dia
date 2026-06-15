@@ -76,20 +76,22 @@
 
     &-input {
       position: relative;
-
       box-sizing: border-box;
       padding-bottom: 16px;
       border: none;
-
       font-size: 15px;
       font-weight: 600;
       color: vars.$color-light;
-
       background-color: vars.$color-black;
       outline: none;
       box-shadow: 0 1px vars.$color-light;
-
       transition: box-shadow vars.$time-animation linear;
+
+      &:autofill, &:-webkit-autofill {
+        color: vars.$color-light;
+        -webkit-text-fill-color: vars.$color-light;
+        box-shadow: 0 0 0 1000px vars.$color-black inset, 0 1px vars.$color-light;
+      }
 
       &::placeholder {
         color: vars.$color-light-opacity;
@@ -151,13 +153,17 @@
 
       &-data {
         margin-top: 8px;
-
         font-family: 'Open Sans', sans-serif;
         font-size: 24px;
         font-weight: 600;
         line-height: 150%;
         color: vars.$color-light;
         text-decoration: none;
+        transition: color vars.$time-animation linear;
+
+        &:hover {
+          color: vars.$color-accent;
+        }
       }
 
       &-icons {
