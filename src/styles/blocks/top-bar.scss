@@ -89,8 +89,6 @@
   }
 
   &__nav {
-    pointer-events: none;
-
     position: fixed;
     z-index: 10;
     top: 0;
@@ -111,7 +109,6 @@
     transition: left vars.$time-animation;
 
     &:target {
-      pointer-events: all;
       left: 0;
 
       .page__body {
